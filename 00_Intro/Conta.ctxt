@@ -2,7 +2,11 @@
 comment0.target=Conta
 comment0.text=\r\n\ Escreva\ uma\ descri\u00E7\u00E3o\ da\ classe\ Conta\ aqui.\r\n\ \r\n\ @author\ (seu\ nome)\ \r\n\ @version\ (um\ n\u00FAmero\ da\ vers\u00E3o\ ou\ uma\ data)\r\n
 comment1.params=valor
-comment1.target=void\ depositar(double)
+comment1.target=void\ depositar(int)
 comment2.params=valor
-comment2.target=void\ levantar(double)
-numComments=3
+comment2.target=void\ levantar(int)
+comment3.params=
+comment3.target=int\ mediaDepositos()
+comment4.params=
+comment4.target=int\ mediaLevantamentos()
+numComments=5

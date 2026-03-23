@@ -11,9 +11,9 @@ public class Movimento
     public enum Tipo { DEPOSITO, LEVANTAMENTO }
 
     public Tipo tipo;
-    public double valor;
+    public int valor;
 
-    public Movimento(Tipo tipo, double valor) {
+    public Movimento(Tipo tipo, int valor) {
         this.tipo = tipo;
         this.valor = valor;
     }

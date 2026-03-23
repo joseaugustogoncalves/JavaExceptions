@@ -8,21 +8,21 @@ import java.util.ArrayList;
 public class Conta
 {
     // Variáveis de Instância
-    public double saldo = 0;
+    public int saldo = 0;
     public ArrayList<Movimento> movimentos = new ArrayList<>();
 
-    public void depositar(double valor) {
+    public void depositar(int valor) {
         saldo += valor;
         movimentos.add(new Movimento(Movimento.Tipo.DEPOSITO, valor));
     }
 
-    public void levantar(double valor) {
+    public void levantar(int valor) {
         saldo -= valor;
         movimentos.add(new Movimento(Movimento.Tipo.LEVANTAMENTO, valor));
     }
     
-    public double mediaDepositos() {
-        double soma = 0;
+    public int mediaDepositos() {
+        int soma = 0;
         int cont = 0;
     
         for (Movimento m : movimentos) {
@@ -35,8 +35,8 @@ public class Conta
         return soma / cont;
     }
 
-    public double mediaLevantamentos() {
-        double soma = 0;
+    public int mediaLevantamentos() {
+        int soma = 0;
         int cont = 0;
     
         for (Movimento m : movimentos) {
