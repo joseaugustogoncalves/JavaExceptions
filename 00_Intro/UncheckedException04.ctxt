@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=UncheckedException04
+comment0.text=\r\n\ N\u00E3o\ s\u00E3o\ obrigat\u00F3rias\ de\ tratar.\ \r\n\ Acontecem\ muitas\ vezes\ por\ erros\ de\ programa\u00E7\u00E3o.\r\n\ Exemplos\:\r\n\ NullPointerException\r\n\ ArithmeticException\r\n\ ArrayIndexOutOfBoundsException\r\n\ IllegalArgumentException\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=
+comment2.target=void\ met1()
+comment3.params=
+comment3.target=void\ met2()
+numComments=4

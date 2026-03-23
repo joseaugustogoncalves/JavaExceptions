@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=ErrorClass02
+comment0.text=\r\n\ Exemplo\ de\ um\ Error\:\ StackOverflowError\r\n\ O\ StackOverflowError\ ocorre\ quando\ a\ pilha\ de\ chamadas\ (stack)\ \r\n\ fica\ cheia,\ normalmente\ devido\ a\ recurs\u00E3o\ infinita.\r\n\ \r\n\ Quando\ o\ programa\ corre,\ a\ JVM\ come\u00E7a\ a\ chamar\ causarStackOverflow()\ \r\n\ repetidamente,\ guardando\ cada\ chamada\ na\ stack.\r\n\ Como\ nunca\ h\u00E1\ uma\ condi\u00E7\u00E3o\ de\ paragem,\ \r\n\ a\ stack\ fica\ cheia\ e\ a\ JVM\ lan\u00E7a\:\r\n\ Exception\ in\ thread\ "main"\ java.lang.StackOverflowError\r\n
+comment1.params=
+comment1.target=void\ causarStackOverflow()
+numComments=2
