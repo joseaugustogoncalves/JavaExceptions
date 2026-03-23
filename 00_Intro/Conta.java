@@ -34,8 +34,8 @@ public class Conta
         movimentos.add(new Movimento(Movimento.Tipo.LEVANTAMENTO, valor));
     }
     
-    public double mediaDepositos() {
-        double soma = 0;
+    public int mediaDepositos() {
+        int soma = 0;
         int cont = 0;
     
         for (Movimento m : movimentos) {
@@ -48,8 +48,8 @@ public class Conta
         return soma / cont;
     }
 
-    public double mediaLevantamentos() {
-        double soma = 0;
+    public int mediaLevantamentos() {
+        int soma = 0;
         int cont = 0;
     
         for (Movimento m : movimentos) {
