@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Conta
-comment0.text=\r\n\ Escreva\ uma\ descri\u00E7\u00E3o\ da\ classe\ Conta\ aqui.\r\n\ \r\n\ @author\ (seu\ nome)\ \r\n\ @version\ (um\ n\u00FAmero\ da\ vers\u00E3o\ ou\ uma\ data)\r\n
+comment0.text=\r\n\ Vers\u00E3o\ 2\ da\ conta\r\n\ Introduzir\ pr\u00E9\u2011condi\u00E7\u00F5es\ (design\ by\ contract)\r\n\ Antes\ de\ executar\ um\ m\u00E9todo,\ \r\n\ deve\u2011se\ garantir\ o\ estado\ m\u00EDnimo\ aceit\u00E1vel\r\n
 comment1.params=valor
 comment1.target=void\ depositar(double)
 comment2.params=valor
