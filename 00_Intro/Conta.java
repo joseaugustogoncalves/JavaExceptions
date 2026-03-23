@@ -11,16 +11,52 @@ public class Conta
     public int saldo = 0;
     public ArrayList<Movimento> movimentos = new ArrayList<>();
     
+    /**
+     * Regista um depósito na conta.
+     *
+     * Pré-condições:
+     *  - valor deve ser maior que zero.
+     *
+     * Pós-condições:
+     *  - o saldo aumenta em 'valor';
+     *  - um movimento do tipo DEPOSITO é adicionado à lista.
+     */
     public void depositar(int valor) {
         saldo += valor;
         movimentos.add(new Movimento(Movimento.Tipo.DEPOSITO, valor));
     }
     
+    /**
+     * Regista um levantamento na conta.
+     *
+     * Pré-condições:
+     *  - valor deve ser maior que zero;
+     *  - valor deve ser menor ou igual ao saldo atual
+     *    (para evitar saldo negativo).
+     *
+     * Pós-condições:
+     *  - o saldo diminui em 'valor';
+     *  - um movimento do tipo LEVANTAMENTO é adicionado.
+     */
     public void levantar(int valor) {
         saldo -= valor;
         movimentos.add(new Movimento(Movimento.Tipo.LEVANTAMENTO, valor));
     }
     
+    
+    /**
+     * Calcula a média dos valores de todos os depósitos realizados.
+     *
+     * Pré-condições:
+     *  - deve existir pelo menos um movimento do tipo DEPOSITO;
+     *    caso contrário, ocorrerá divisão por zero.
+     *
+     * Pós-condições:
+     *  - nenhuma alteração ao estado interno da conta.
+     *
+     * Nota: esta versão não verifica as pré-condições.
+     */
+
     public int mediaDepositos() {
         int soma = 0;
         int cont = 0;
@@ -34,6 +70,19 @@ public class Conta
     
         return soma / cont;
     }
+
+    /**
+     * Calcula a média dos valores dos levantamentos.
+     *
+     * Pré-condições:
+     *  - deve existir pelo menos um movimento do tipo LEVANTAMENTO;
+     *    caso contrário, ocorrerá divisão por zero.
+     *
+     * Pós-condições:
+     *  - nenhuma alteração ao estado interno da conta.
+     *
+     * Nota: esta versão não verifica as pré-condições.
+     */
 
     public int mediaLevantamentos() {
         int soma = 0;
