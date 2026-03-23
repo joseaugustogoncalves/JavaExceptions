@@ -1,32 +1,24 @@
 import java.util.ArrayList;
 
 /**
- * Versão 3 da Conta
- * Implementação das pré‑condições com exceções.
- * Esta versão já impede estados inválidos e falhas lógicas.
+ * Versão 4 da Conta
+ * Implementação das pré‑condições com exceções personalizadas.
+ * Esta versão representa corretamente as regras de negócio.
  */
 public class Conta
 {
-    // Variáveis de Instância
     public int saldo = 0;
     public ArrayList<Movimento> movimentos = new ArrayList<>();
 
     /**
      * Regista um depósito na conta.
      *
-     * Pré-condições:
-     *  - valor > 0
-     *
-     * Exceções:
-     *  - IllegalArgumentException se valor <= 0
-     *
-     * Pós-condições:
-     *  - saldo aumenta
-     *  - movimento do tipo DEPOSITO é registado
+     * @param valor valor a depositar; deve ser > 0
+     * @throws ValorInvalidoException se valor <= 0
      */
-    public void depositar(int valor) {
+    public void depositar(int valor) throws ValorInvalidoException {
         if (valor <= 0) {
-            throw new IllegalArgumentException("O valor do depósito deve ser maior do que zero.");
+            throw new ValorInvalidoException("O valor do depósito deve ser maior que zero.");
         }
 
         saldo += valor;
@@ -36,25 +28,19 @@ public class Conta
     /**
      * Regista um levantamento na conta.
      *
-     * Pré-condições:
-     *  - valor > 0
-     *  - valor <= saldo (para evitar saldo negativo)
-     *
-     * Exceções:
-     *  - IllegalArgumentException se valor <= 0
-     *  - IllegalStateException se valor > saldo
-     *
-     * Pós-condições:
-     *  - saldo diminui
-     *  - movimento LEVANTAMENTO é registado
+     * @param valor valor a levantar; deve ser > 0 e <= saldo
+     * @throws ValorInvalidoException se valor <= 0
+     * @throws SaldoInsuficienteException se valor > saldo
      */
-    public void levantar(int valor) {
+    public void levantar(int valor)
+            throws ValorInvalidoException, SaldoInsuficienteException {
+
         if (valor <= 0) {
-            throw new IllegalArgumentException("O valor do levantamento deve ser maior do que zero.");
+            throw new ValorInvalidoException("O valor do levantamento deve ser maior que zero.");
         }
 
         if (valor > saldo) {
-            throw new IllegalStateException("Saldo insuficiente para realizar o levantamento.");
+            throw new SaldoInsuficienteException("Saldo insuficiente para o levantamento.");
         }
 
         saldo -= valor;
@@ -64,16 +50,10 @@ public class Conta
     /**
      * Calcula a média dos depósitos.
      *
-     * Pré-condições:
-     *  - Deve existir pelo menos um depósito.
-     *
-     * Exceções:
-     *  - IllegalStateException se cont == 0
-     *
-     * Pós-condições:
-     *  - Nenhum estado é alterado
+     * @return média dos valores depositados
+     * @throws SemMovimentosException se não houver depósitos
      */
-    public int mediaDepositos() {
+    public int mediaDepositos() throws SemMovimentosException {
         int soma = 0;
         int cont = 0;
 
@@ -85,7 +65,7 @@ public class Conta
         }
 
         if (cont == 0) {
-            throw new IllegalStateException("Não existem depósitos para calcular a média.");
+            throw new SemMovimentosException("Não existem depósitos para calcular a média.");
         }
 
         return soma / cont;
@@ -94,16 +74,10 @@ public class Conta
     /**
      * Calcula a média dos levantamentos.
      *
-     * Pré-condições:
-     *  - Deve existir pelo menos um levantamento.
-     *
-     * Exceções:
-     *  - IllegalStateException se cont == 0
-     *
-     * Pós-condições:
-     *  - Nenhum estado é alterado
+     * @return média dos levantamentos efetuados
+     * @throws SemMovimentosException se não houver levantamentos
      */
-    public int mediaLevantamentos() {
+    public int mediaLevantamentos() throws SemMovimentosException {
         int soma = 0;
         int cont = 0;
 
@@ -115,10 +89,9 @@ public class Conta
         }
 
         if (cont == 0) {
-            throw new IllegalStateException("Não existem levantamentos para calcular a média.");
+            throw new SemMovimentosException("Não existem levantamentos para calcular a média.");
         }
 
         return soma / cont;
     }
-
 }
