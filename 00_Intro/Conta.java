@@ -33,5 +33,33 @@ public class Conta
         saldo -= valor;
         movimentos.add(new Movimento(Movimento.Tipo.LEVANTAMENTO, valor));
     }
+    
+    public double mediaDepositos() {
+        double soma = 0;
+        int cont = 0;
+    
+        for (Movimento m : movimentos) {
+            if (m.tipo == Movimento.Tipo.DEPOSITO) {
+                soma += m.valor;
+                cont++;
+            }
+        }
+    
+        return soma / cont;
+    }
+
+    public double mediaLevantamentos() {
+        double soma = 0;
+        int cont = 0;
+    
+        for (Movimento m : movimentos) {
+            if (m.tipo == Movimento.Tipo.LEVANTAMENTO) {
+                soma += m.valor;
+                cont++;
+            }
+        }
+    
+        return soma / cont;
+    }
 
 }
