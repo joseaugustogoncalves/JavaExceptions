@@ -2,9 +2,9 @@
 comment0.target=Conta
 comment0.text=\r\n\ Vers\u00E3o\ 2\ da\ conta\r\n\ Introduzir\ pr\u00E9\u2011condi\u00E7\u00F5es\ (design\ by\ contract)\r\n\ Antes\ de\ executar\ um\ m\u00E9todo,\ \r\n\ deve\u2011se\ garantir\ o\ estado\ m\u00EDnimo\ aceit\u00E1vel\r\n
 comment1.params=valor
-comment1.target=void\ depositar(double)
+comment1.target=void\ depositar(int)
 comment2.params=valor
-comment2.target=void\ levantar(double)
+comment2.target=void\ levantar(int)
 comment3.params=
 comment3.target=int\ mediaDepositos()
 comment4.params=

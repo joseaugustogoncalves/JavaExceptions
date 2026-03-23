@@ -10,7 +10,7 @@ public class ContaTest
     public static void main(String[] args) {
         Conta c1 = new Conta();
         
-        double r = c1.mediaDepositos();
+        int r = c1.mediaDepositos();
         
         System.out.println(r);
         
