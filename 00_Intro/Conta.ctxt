@@ -1,16 +1,16 @@
 #BlueJ class context
 comment0.target=Conta
-comment0.text=\r\n\ Vers\u00E3o\ 2\ da\ conta\r\n\ Introduzir\ pr\u00E9\u2011condi\u00E7\u00F5es\ (design\ by\ contract)\r\n\ Antes\ de\ executar\ um\ m\u00E9todo,\ \r\n\ deve\u2011se\ garantir\ o\ estado\ m\u00EDnimo\ aceit\u00E1vel\r\n
+comment0.text=\n\ Vers\u00E3o\ 2\ da\ conta\n\ Introduzir\ pr\u00E9\u2011condi\u00E7\u00F5es\ (design\ by\ contract)\n\ Antes\ de\ executar\ um\ m\u00E9todo,\ \n\ deve\u2011se\ garantir\ o\ estado\ m\u00EDnimo\ aceit\u00E1vel\n
 comment1.params=valor
 comment1.target=void\ depositar(int)
-comment1.text=\r\n\ Regista\ um\ dep\u00F3sito\ na\ conta.\r\n\r\n\ Pr\u00E9-condi\u00E7\u00F5es\:\r\n\ \ -\ valor\ deve\ ser\ maior\ que\ zero.\r\n\r\n\ P\u00F3s-condi\u00E7\u00F5es\:\r\n\ \ -\ o\ saldo\ aumenta\ em\ 'valor';\r\n\ \ -\ um\ movimento\ do\ tipo\ DEPOSITO\ \u00E9\ adicionado\ \u00E0\ lista.\r\n
+comment1.text=\n\ Regista\ um\ dep\u00F3sito\ na\ conta.\n\n\ Pr\u00E9-condi\u00E7\u00F5es\:\n\ \ -\ valor\ deve\ ser\ maior\ que\ zero.\n\n\ P\u00F3s-condi\u00E7\u00F5es\:\n\ \ -\ o\ saldo\ aumenta\ em\ 'valor';\n\ \ -\ um\ movimento\ do\ tipo\ DEPOSITO\ \u00E9\ adicionado\ \u00E0\ lista.\n
 comment2.params=valor
 comment2.target=void\ levantar(int)
-comment2.text=\r\n\ Regista\ um\ levantamento\ na\ conta.\r\n\r\n\ Pr\u00E9-condi\u00E7\u00F5es\:\r\n\ \ -\ valor\ deve\ ser\ maior\ que\ zero;\r\n\ \ -\ valor\ deve\ ser\ menor\ ou\ igual\ ao\ saldo\ atual\r\n\ \ \ \ (para\ evitar\ saldo\ negativo).\r\n\r\n\ P\u00F3s-condi\u00E7\u00F5es\:\r\n\ \ -\ o\ saldo\ diminui\ em\ 'valor';\r\n\ \ -\ um\ movimento\ do\ tipo\ LEVANTAMENTO\ \u00E9\ adicionado.\r\n
+comment2.text=\n\ Regista\ um\ levantamento\ na\ conta.\n\n\ Pr\u00E9-condi\u00E7\u00F5es\:\n\ \ -\ valor\ deve\ ser\ maior\ que\ zero;\n\ \ -\ valor\ deve\ ser\ menor\ ou\ igual\ ao\ saldo\ atual\n\ \ \ \ (para\ evitar\ saldo\ negativo).\n\n\ P\u00F3s-condi\u00E7\u00F5es\:\n\ \ -\ o\ saldo\ diminui\ em\ 'valor';\n\ \ -\ um\ movimento\ do\ tipo\ LEVANTAMENTO\ \u00E9\ adicionado.\n
 comment3.params=
 comment3.target=int\ mediaDepositos()
-comment3.text=\r\n\ Calcula\ a\ m\u00E9dia\ dos\ valores\ de\ todos\ os\ dep\u00F3sitos\ realizados.\r\n\r\n\ Pr\u00E9-condi\u00E7\u00F5es\:\r\n\ \ -\ deve\ existir\ pelo\ menos\ um\ movimento\ do\ tipo\ DEPOSITO;\r\n\ \ \ \ caso\ contr\u00E1rio,\ ocorrer\u00E1\ divis\u00E3o\ por\ zero.\r\n\r\n\ P\u00F3s-condi\u00E7\u00F5es\:\r\n\ \ -\ nenhuma\ altera\u00E7\u00E3o\ ao\ estado\ interno\ da\ conta.\r\n\r\n\ Nota\:\ esta\ vers\u00E3o\ n\u00E3o\ verifica\ as\ pr\u00E9-condi\u00E7\u00F5es.\r\n
+comment3.text=\n\ Calcula\ a\ m\u00E9dia\ dos\ valores\ de\ todos\ os\ dep\u00F3sitos\ realizados.\n\n\ Pr\u00E9-condi\u00E7\u00F5es\:\n\ \ -\ deve\ existir\ pelo\ menos\ um\ movimento\ do\ tipo\ DEPOSITO;\n\ \ \ \ caso\ contr\u00E1rio,\ ocorrer\u00E1\ divis\u00E3o\ por\ zero.\n\n\ P\u00F3s-condi\u00E7\u00F5es\:\n\ \ -\ nenhuma\ altera\u00E7\u00E3o\ ao\ estado\ interno\ da\ conta.\n\n\ Nota\:\ esta\ vers\u00E3o\ n\u00E3o\ verifica\ as\ pr\u00E9-condi\u00E7\u00F5es.\n
 comment4.params=
 comment4.target=int\ mediaLevantamentos()
-comment4.text=\r\n\ Calcula\ a\ m\u00E9dia\ dos\ valores\ dos\ levantamentos.\r\n\r\n\ Pr\u00E9-condi\u00E7\u00F5es\:\r\n\ \ -\ deve\ existir\ pelo\ menos\ um\ movimento\ do\ tipo\ LEVANTAMENTO;\r\n\ \ \ \ caso\ contr\u00E1rio,\ ocorrer\u00E1\ divis\u00E3o\ por\ zero.\r\n\r\n\ P\u00F3s-condi\u00E7\u00F5es\:\r\n\ \ -\ nenhuma\ altera\u00E7\u00E3o\ ao\ estado\ interno\ da\ conta.\r\n\r\n\ Nota\:\ esta\ vers\u00E3o\ n\u00E3o\ verifica\ as\ pr\u00E9-condi\u00E7\u00F5es.\r\n
+comment4.text=\n\ Calcula\ a\ m\u00E9dia\ dos\ valores\ dos\ levantamentos.\n\n\ Pr\u00E9-condi\u00E7\u00F5es\:\n\ \ -\ deve\ existir\ pelo\ menos\ um\ movimento\ do\ tipo\ LEVANTAMENTO;\n\ \ \ \ caso\ contr\u00E1rio,\ ocorrer\u00E1\ divis\u00E3o\ por\ zero.\n\n\ P\u00F3s-condi\u00E7\u00F5es\:\n\ \ -\ nenhuma\ altera\u00E7\u00E3o\ ao\ estado\ interno\ da\ conta.\n\n\ Nota\:\ esta\ vers\u00E3o\ n\u00E3o\ verifica\ as\ pr\u00E9-condi\u00E7\u00F5es.\n
 numComments=5

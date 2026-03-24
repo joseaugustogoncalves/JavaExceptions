@@ -22,6 +22,12 @@ public class Conta
      *  - um movimento do tipo DEPOSITO é adicionado à lista.
      */
     public void depositar(int valor) {
+        
+        if (valor <= 0) {
+            System.out.println("Valor inválido!");
+            return;
+        }
+
         saldo += valor;
         movimentos.add(new Movimento(Movimento.Tipo.DEPOSITO, valor));
     }
@@ -39,6 +45,17 @@ public class Conta
      *  - um movimento do tipo LEVANTAMENTO é adicionado.
      */
     public void levantar(int valor) {
+        
+        if (valor <= 0) {
+            System.out.println("Valor inválido!");
+            return;
+        }
+        
+        if (valor > saldo) {
+            System.out.println("Saldo insuficiente!");
+            return;
+        }
+
         saldo -= valor;
         movimentos.add(new Movimento(Movimento.Tipo.LEVANTAMENTO, valor));
     }
@@ -60,14 +77,22 @@ public class Conta
     public int mediaDepositos() {
         int soma = 0;
         int cont = 0;
-    
+        
+        if(this.movimentos.size() == 0) {
+            return 0;    
+        }
+        
         for (Movimento m : movimentos) {
             if (m.tipo == Movimento.Tipo.DEPOSITO) {
                 soma += m.valor;
                 cont++;
             }
         }
-    
+        
+        if (cont == 0) {
+            return 0;
+        }
+        
         return soma / cont;
     }
 
@@ -87,14 +112,22 @@ public class Conta
     public int mediaLevantamentos() {
         int soma = 0;
         int cont = 0;
-    
+        
+        if(this.movimentos.size() == 0) {
+            return 0;    
+        }
+        
         for (Movimento m : movimentos) {
             if (m.tipo == Movimento.Tipo.LEVANTAMENTO) {
                 soma += m.valor;
                 cont++;
             }
         }
-    
+        
+        if (cont == 0) {
+            return 0;
+        }
+        
         return soma / cont;
     }
 
